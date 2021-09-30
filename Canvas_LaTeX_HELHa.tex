@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper]{report} %décrire le type de document ainsi que le format
+\usepackage[utf8]{inputenc} %spécifié le système d'encodage, c'est soit utf8 soit latin1 normalement
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{wrapfig} %Pour entourer les figure de texte
+\usepackage[french]{babel} %Définir la langue sur Français
+\usepackage{titling} %Pour customiser la page de titre
+\usepackage{tabularx}
+\usepackage{makecell}
+
+\begin{document} %On commence le document
+
+\author{\textsc{Nom de famille 1} Prénom 1\and\textsc{nom de famille 2} Prénom 2} %liste des auteurs
+\date{\today} %date
+\title{\centering\includegraphics[height=4cm]{HELHa}\\Titre du document} %déclaration du titre
+\setlength\droptitle{-6cm}
+\pretitle{\begin{center}\Huge\bfseries}
+\posttitle{\end{center}\vskip2cm}
+%\maketitle %s-STandard title page
+
+%Custom title page
+\begin{titlepage}
+\def\HRule{\rule{\linewidth}{0.8pt}}
+\centering
+\begin{tabularx}{\linewidth}{@{}lXr@{}}
+	\makecell{\includegraphics[height=2cm]{HELHa}}
+	& &\makecell{\includegraphics[height=3cm]{ISIC}}
+\end{tabularx}
+
+\vspace{5cm}
+
+\fbox{\Huge\textbf{Title}}
+
+\vspace{4cm}
+
+\normalsize
+\textsc{Author Name1}
+
+\textsc{Author Name2}
+
+\vspace{1cm}
+\small
+\today
+\normalsize
+\vfill
+\begin{tabularx}{\linewidth}{@{}lXr@{}}
+	\makecell{\includegraphics[height=3cm]{CTI}}
+	& &\makecell{\includegraphics[height=1cm]{EUR-ACE}}
+\end{tabularx}
+\end{titlepage}
+
+\tableofcontents %on ecrit la table des matières
+
+\chapter{Nom du premier chapitre} %déclaration d'un chapitre uniquement en report
+
+\section{Première section} %déclaration d'une section donc titre
+
+\subsection{Première sous section} %déclaration d'une sous section donc sous titre
+
+\paragraph{}
+Text du paragraphe 1
+\paragraph{}
+Text paragraphe 2
+
+\listoffigures
+\listoftables
+
+\end{document}
